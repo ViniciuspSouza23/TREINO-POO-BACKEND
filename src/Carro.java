@@ -3,7 +3,7 @@ public class Carro{
     String nome;
     String cor;
     String marca;
-    int vel;
+    private int vel;
 
    public Carro(String nome , String cor , String marca , int vel){
         this.nome = nome;
@@ -13,11 +13,14 @@ public class Carro{
     }
 
     //metodos 
-    void acelerar(int aceleracao){
+   public void acelerar(int aceleracao){
         vel+=aceleracao;
     }
 
-        void freiar(int parar){
+        public void freiar(int parar){
             vel-=parar;
+        }
+        public int getVel(){
+            return vel;
         }
     }

@@ -6,6 +6,6 @@ public class App {
          System.out.println("Nome: "+ c1.nome);
          System.out.println("Marca: "+ c1.marca);
          System.out.println("Cor: "+ c1.cor);
-         System.out.println("Velocidade: "+ c1.vel);
+         System.out.println(c1.getVel());
     }
 }
