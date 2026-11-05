@@ -1,17 +1,24 @@
 public class Carro{
     //atributos
-    String nome;
-    String cor;
-    String marca;
+    private String nome;
+    private String cor;
+    private String marca;
     private int vel;
 
-   public Carro(String nome , String cor , String marca , int vel){
+   public Carro(String nome , String cor , String marca){
         this.nome = nome;
         this.cor = cor;
         this.marca = marca;
-        this.vel = vel;
     }
-
+    public String getCor(){
+        return cor;
+    }
+    public String getNome(){
+        return nome;
+    }
+    public String getMarca(){
+        return marca;
+    }
     //metodos 
    public void acelerar(int aceleracao){
         vel+=aceleracao;
@@ -23,4 +30,14 @@ public class Carro{
         public int getVel(){
             return vel;
         }
+       public void setVel(int vel){
+        this.vel = vel;
+        if(vel < 0){
+            System.out.println("VELOCIDADE NEGATIVA!");
+        }
+        else{
+            System.out.println("Velocidade aceita");
+        }
+
+       }
     }
